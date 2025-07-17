@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+        <style>
+            #google_image {
+                width: 270px;
+                margin-bottom: 20px;
+            }
+
+            #search {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            #searchbar {
+                height: 45px;
+                width: 560px;
+                border: 1px solid rgb(179, 178, 178);
+                border-radius: 25px;
+                border-color: rgb(219, 217, 217);
+                border-width: 1px;
+                box-shadow: 0 1px 9px rgba(179, 178, 178, 0.3);padding-left: 40px;
+            }
+            #searchbar:hover {
+                box-shadow: 0 1px 10px rgba(121, 121, 121, 0.3);
+            }
+            #searchbar:focus {
+                outline: none;
+                border: 1px solid rgb(138, 138, 138);
+                box-shadow: 0 1px 10px rgba(179, 178, 178, 0.3);
+                
+            }
+
+            #search_button {
+                margin-left: 0px;
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                height: 35px;
+                margin-top: 30px;
+                width: 150px;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+                color: rgb(49, 48, 48);
+                
+
+            }
+            #search_button:hover {
+                border-color: rgb(196, 196, 196);
+                box-shadow: 0 1px 1px rgba(161, 160, 160, 0.3);
+            }
+
+            #lucky {
+                background-color: #f8f9fa;
+                border: 1px solid #f8f9fa;
+                height: 35px;
+                margin-left: 15px;
+                width: 150px;
+                border-radius: 5px;
+                font-family: Arial, sans-serif;
+                color: rgb(49, 48, 48);
+
+            }
+            #lucky:hover {
+                border-color: rgb(196, 196, 196);
+                box-shadow: 0 1px 1px rgba(161, 160, 160, 0.3);
+            }
+
+            #gmail_button {
+                text-align: center;
+            }
+
+            .top_buttons {
+                display: flex;
+                justify-content: flex-end;
+            }
+            .text_button {
+                background: none;
+                border: none;
+                color: rgb(42, 42, 42);
+            }
+            .text_button:hover {
+                text-decoration: underline;
+            }
+
+            #icons {
+                width: 20px;
+                height: 20px;
+            }
+            .icon_button {
+                background: none;
+                border: none;
+            }
+            .icon_button:hover {
+                background-color: darkgray;
+            }
+            .apps-icon {
+                width: 15px;
+                height: 15px;
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                grid-template-rows: repeat(3, auto);
+                gap: 2px;
+                cursor: pointer;
+                padding: 10px;
+                margin-left: 11px;
+                margin-top: 3px;
+                margin-right: 10px;
+                transition: background-color 0.2s ease;
+                border-radius: 100px;
+            }
+
+            .apps-icon div {
+                width: 4px;
+                height: 4px;
+                background-color: #5f6368;
+                border-radius: 50%;
+            }
+            .apps-icon:hover {
+                background-color: #c8c4c4;
+                
+                
+            }
+           
+
+            .sign_button {
+                margin-left: 7px;
+                border: none;
+                background-color: rgb(67, 67, 231);
+                color: cornsilk;
+                width: 85px;
+                height: 40px;
+                border-radius: 50px;
+            }
+            .sign_button:hover {
+                box-shadow: 0 2px 3px rgba(24, 24, 24, 0.3);
+                cursor: pointer;
+            }
+
+            #fakos {
+                position: absolute;
+                left: 345px;
+                top: 19px;
+                width: 12px;
+                height: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                pointer-events: none;
+                
+            }
+
+            #fakostop {
+                position: relative;
+            }
+
+            #keyboard {
+                bottom: 10px;
+                left: 800px;
+                position: absolute;
+                border: none;
+                background: none;
+            }
+            #keyboard:hover {
+                cursor: pointer;
+            }
+
+            #mic {
+                bottom: 10px;
+                left: 840px;
+                position: absolute;
+                border: none;
+                background: none;
+            }
+            #mic:hover {
+                cursor: pointer;
+            }
+
+            #lens {
+                bottom: 10px;
+                left: 880px;
+                position: absolute;
+                border: none;
+                background: none;
+            }
+            #lens:hover {
+                cursor: pointer;
+            }
+
+            #down {
+                display: flex;
+                background-color: #eeeff1;
+                font-family: Arial, sans-serif;
+                height: 50px;
+                margin-top: 140px;
+                width: 100%;
+                padding-left: 37px;
+            }
+
+            #down2 {
+                display: flex;
+                background-color: #eeeff1;
+                font-family: Arial, sans-serif;
+                 height: 50px;
+                margin-top: 0px;
+                width: 100%;
+                padding-left: 37px;
+                border-top: 1px solid rgb(210, 210, 213); 
+                
+                
+            }
+
+            .downb {
+                border: none;
+                background: none;
+                margin-right: 25px;
+                
+                
+            }
+
+            .downbm {
+                border: none;
+                background: none;
+                margin-right: 25px;
+                margin-left: 50px;
+            }
+
+            .downbm:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            .downb:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            #br {
+                 margin-left: 120px;
+                 padding-top: 14px;
+            }
+           
+
+        </style>
+    </head>
+    <body>
+        <div class="top_buttons">
+            <button onclick="location.href='advanced.html'" class="text_button" >
+                Advanced
+            </button>
+            <button class="text_button">
+                Gmail
+            </button>
+            
+            <button  onclick="location.href='imagesearch.html'" class="text_button">
+                Pictures
+            </button>
+                <div class="apps-icon" onclick="toggleMenu()" title="Google apps">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+
+                </div>
+            
+            <button class="sign_button">
+                Entry
+            </button>
+            
+
+        </div>
+        <div id="search">
+            <img id="google_image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png" alt="google logo">
+            <form action="https://www.google.com/search">
+                <div id="fakostop">
+                    <input id="searchbar" type="text" name="q">
+                    <img id="fakos" src="https://tse3.mm.bing.net/th/id/OIP.RF8hdNm5eOnLDpG_GSu5NwHaHN?pid=Api&P=0&h=220" alt="search">
+                    <button id="keyboard" title="Input tools">
+                        <img  src="https://icon-library.com/images/keyboard-vector-icon/keyboard-vector-icon-22.jpg" width="20px"; height="23px";>
+                    </button>
+                    <button id="mic" title="Voice search">
+                        <img src="https://cdn-icons-png.flaticon.com/512/565/565250.png" width="20px"; height="20px";>
+
+                    </button>
+                    <button id="lens" title="Search by image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT20EWyGC9Qgvwf4ZLxtj9UfVHDqmHNZPcitA&s" width="20px"; height="20px";>
+                    </button>
+                </div>
+                 <div id="buttons">
+                    <input id="search_button" type="submit" value="Google Search" margin-left: 470px;>
+                    <input id="lucky" type="submit" value="I'm Feeling Lucky" margin-left: 690px;>
+                </div>
+            </form>
+        </div>
+        
+        <div id="down">
+            <p id="gr">Greece</p>
+        </div>
+        <div id="down2">
+            <button class="downb">
+                About
+            </button>
+            <button class="downb">
+                Advertizing
+            </button>
+            <button class="downb">
+                Business
+            </button>
+            <button class="downb">
+                How search works
+            </button>
+            <button class="downbm">
+                <img src="https://cdn-icons-png.flaticon.com/512/547/547889.png" width="13px"; height="13px";>
+                The third decade of climate action: See what we are doing
+            </button>
+            <div id="br">
+                <button class="downb">
+                    Privacy
+                </button>
+                <button class="downb">
+                    Terms
+                </button>
+                <button class="downb">
+                    Settings
+                </button>
+            </div>
+            
+        </div>
+       
+       
+    </body>
+</html>
