@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            Advanced
+        </title>
+
+        <style>
+            #google_image {
+                width: 70px;
+                height: 25px;
+                flex-grow: 1;
+                padding-left: 10px;
+                padding-right: 1000px;
+                padding-top: 10px;
+            }
+
+            .apps-icon {
+                width: 15px;
+                height: 15px;
+                display: grid;
+                grid-template-columns: repeat(3, auto);
+                grid-template-rows: repeat(3, auto);
+                gap: 2px;
+                cursor: pointer;
+                padding: 10px;
+                margin-left: 11px;
+                margin-top: 3px;
+                margin-right: 10px;
+                transition: background-color 0.2s ease;
+                border-radius: 100px;
+            }
+            .apps-icon div {
+                width: 4px;
+                height: 4px;
+                background-color: #5f6368;
+                border-radius: 50%;
+            }
+            .apps-icon:hover {
+                background-color: #c8c4c4;
+                
+                
+            }
+
+            .sign_button {
+                margin-right: 20px;
+                border: none;
+                background-color: rgb(82, 108, 255);
+                color: cornsilk;
+                width: 100px;
+                height: 35px;
+                border-radius: 4px;
+                margin-top: 5px;
+                
+            }
+            .sign_button:hover {
+                box-shadow: 0 2px 3px rgba(24, 24, 24, 0.3);
+                cursor: pointer;
+                background: rgb(66, 88, 214);
+            }
+
+            #toprow {
+                display: flex;
+                margin-top: 10px;
+                
+            }
+
+            #red {
+                color: rgb(196, 20, 20);
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: larger;
+                margin-left: 35px;
+                margin-top: 40px;
+                margin-bottom: 5px;
+            }
+
+            #flex1 {
+                display: flex;
+                margin-top: 8px;
+                margin-bottom: 0px;
+            }
+            #item11 {
+                font-family: Arial, sans-serif;
+                margin-left: 35px;
+            }
+            #item12 {
+                font-family: Arial, Helvetica, sans-serif, Bold;
+                margin-left: 620px;
+                font-size: small;
+                font-weight: bold;
+                color: #5f6368;
+            }
+
+            .flex2 {
+                display: flex;
+                margin-top: 0px;
+                flex-wrap: nowrap;
+                
+            }
+            .item21 {
+                font-family: Arial, sans-serif;
+                margin-left: 35px;
+                font-size: small;
+                 white-space: nowrap; /* prevents wrapping */
+                flex-shrink: 0;
+            }
+            #item22 {
+                margin-top: 10px;
+                margin-left: 90px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+            }
+            .item23 {
+                font-family: Arial, sans-serif;
+                margin-left: 20px;
+                font-size: 11px;
+                color: #5f6368;
+                margin-top: 15px;
+                 white-space: nowrap; /* prevents wrapping */
+                flex-shrink: 0;
+                
+                
+            }
+            .itemweb {
+                margin-left: 18px;
+                font-family: Arial, sans-serif;
+                
+                font-size: 11px;
+                color: #5f6368;
+                margin-top: 15px;
+                white-space: nowrap; /* prevents wrapping */
+                flex-shrink: 0;
+            }
+            .special {
+                font-size: 11px;
+                vertical-align:inherit;
+                margin-left: 3px;
+                color: #5f6368; 
+                font-weight: inherit;
+                font-family: 'Courier New', Courier, monospace;
+                margin-top: 15px;
+            }
+            #item2d {
+                margin-top: 10px;
+                margin-left: 33px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+            }
+
+            #item3d {
+                margin-top: 10px;
+                margin-left: 60px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+            }
+
+            .special2 {
+                font-size: 11px;
+                vertical-align:inherit;
+                margin-left: 3px;
+                color: #5f6368; 
+                font-weight: inherit;
+                font-family: 'Courier New', Courier, monospace;
+                margin-top: 15px;
+                position: relative;
+                right: 257px;
+            }
+
+            .specialweb {
+                font-size: 11px;
+                vertical-align:inherit;
+                margin-left: 3px;
+                color: #5f6368; 
+                font-weight: inherit;
+                font-family: 'Courier New', Courier, monospace;
+                margin-top: 15px;
+                position: relative;
+                right: 335px;
+                white-space: nowrap; /* prevents wrapping */
+                flex-shrink: 0;
+            }
+            #item4d {
+                margin-top: 10px;
+                margin-left: 45px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 250px; /* reduced width */
+                height: 25px;
+                flex-shrink: 1; /* allow shrinking */
+            }
+            #item5d {
+                margin-top: 10px;
+                margin-left: 68px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+            }
+
+            
+
+
+            #item6d {
+                margin-top: 10px;
+                margin-left: 10px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 264px; /* reduced width */
+                height: 25px;
+                flex-shrink: 1; /* allow shrinking */
+            }
+            #item6d:focus, #item4d:focus,  #item5d:focus, #item3d:focus, #item2d:focus, #item22:focus, #itemwhen:hover {
+                outline: none;
+                border: 0.5px solid rgb(0, 21, 255);
+            }
+            #until {
+                font-family: Arial, sans-serif;
+                font-size: small;
+                margin-left: 9px;
+            }
+
+            .special3 {
+                font-size: 11px;
+                vertical-align:inherit;
+                margin-left: 3px;
+                color: #5f6368; 
+                font-weight: inherit;
+                font-family: 'Courier New', Courier, monospace;
+                margin-top: 15px;
+                position: relative;
+                right: 295px;
+                 white-space: nowrap; /* prevents wrapping */
+                flex-shrink: 0;
+            }
+
+            #dash {
+                display: flex;
+                align-items: flex-end;
+                margin-top: 0px;
+                color: #dfdfdf;
+                margin-bottom: 0px;
+            }
+
+            #dash1 {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 0px;
+                color: #dfdfdf;
+                margin-bottom: 0px;
+            }
+
+            #language {
+                text-decoration: bold;
+                margin-top: 10px;
+                margin-left: 90px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+                border-radius: 3px;
+                background-color: #eceff0;
+            }
+
+            #area {
+                text-decoration: bold;
+                margin-top: 10px;
+                margin-left: 118px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+                border-radius: 3px;
+                background-color: #eceff0;
+            }
+
+            #when {
+                text-decoration: bold;
+                margin-top: 10px;
+                margin-left: 70px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+                border-radius: 3px;
+                background-color: #eceff0;
+            }
+
+            #page {
+                text-decoration: bold;
+                margin-top: 10px;
+                margin-left: 43px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+                border-radius: 3px;
+                background-color: #eceff0;
+            }
+
+            #form {
+                text-decoration: bold;
+                margin-top: 10px;
+                margin-left: 100px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+                border-radius: 3px;
+                background-color: #eceff0;
+            }
+
+            #type {
+                text-decoration: bold;
+                margin-top: 10px;
+                margin-left: 86px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+                border-radius: 3px;
+                background-color: #eceff0;
+            }
+
+            #language:hover, #area:hover, #when:hover, #page:hover, #form:hover, #type:hover{
+                box-shadow:0 0.3px 2px rgba(24, 24, 24, 0.3);
+                border: 0.5px solid rgb(181, 177, 177);
+                background-color:#edf0f1;
+            }
+
+            #language:focus, #area:focus, #when:focus, #page:focus, #form:focus , #type:focus{
+                outline: none;
+                border: 0.5px solid rgb(181, 177, 177);
+                background-color:#d2d6d7;
+                cursor: alias;
+            }
+
+
+            input[list]::placeholder {
+                color: #252627;
+                text-decoration: bold;
+                font-size: smaller;
+                padding-left: 5px;
+                font-weight: 600;
+            }
+
+            .special2 {
+                font-size: 11px;
+                vertical-align:inherit;
+                margin-left: 3px;
+                color: #5f6368; 
+                font-weight: inherit;
+                font-family: 'Courier New', Courier, monospace;
+                margin-top: 15px;
+                position: relative;
+                right: 257px;
+            }
+            #itemwhen {
+                margin-top: 10px;
+                margin-left: 40px;
+                border: 0.5px solid rgb(207, 202, 202);
+                width: 560px;
+                height: 25px;
+            
+            }
+
+            .usage {
+                border: none;
+                background: none;
+                color: blue;
+                margin-left: 30px;
+            }
+            .usage:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
+
+            .sector2 {
+                margin-top: 0px;
+            }
+            #flex1new {
+                display: flex;
+                margin-top: 30px;
+            }
+            .flex2new {
+                display: flex;
+                margin-top: 0px;
+                flex-wrap: nowrap;
+            }
+
+            .as {
+                margin-left: 650px;
+                margin-top: 10px;
+                height: 30px;
+                padding-left: 13px;
+                padding-right: 13px;
+                color: white;
+                font-weight: 700;
+                background-color: rgb(19, 127, 235);
+                font-family: Arial, sans-serif;
+                font-size: 11px;
+                border: 0.5px solid rgb(19, 121, 223);
+                border-radius: 3px;
+            }
+            .as:hover {
+                cursor: pointer;
+                box-shadow: 0 0.3px 2px rgba(24, 24, 24, 0.3);
+                background-color: rgb(17, 117, 216);;
+            }
+
+            #flex3 {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 0px;
+            }
+
+             #down {
+                display: flex;
+                background-color: #eeeff1;
+                font-family: Arial, sans-serif;
+                height: 50px;
+                margin-top: 80px;
+                width: 100%;
+                padding-left: 37px;
+            }
+
+            #down2 {
+                display: flex;
+                background-color: #eeeff1;
+                font-family: Arial, sans-serif;
+                 height: 50px;
+                margin-top: 0px;
+                width: 100%;
+                padding-left: 137px;
+                 
+                
+                
+            }
+
+            .downb {
+                border: none;
+                background: none;
+                margin-right: 25px;
+                
+                
+            }
+            .downb:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+            #gr {
+                font-family: Arial, sans-serif;
+                margin-left: 70px;
+            }
+            #flex4 {
+                margin-top: 0px;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="toprow">
+            <a href="index.html"> 
+                <img id="google_image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1920px-Google_2015_logo.svg.png" alt="google logo">
+            </a>
+            
+            
+            <div class="apps-icon" onclick="toggleMenu()" title="Google apps">
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+                <div></div><div></div><div></div>
+            </div>
+            
+            <button class="sign_button">
+                Entry
+            </button>
+        </div>
+
+        <div>
+            <p id="red">Advanced Search</p>
+        </div>
+        <p id="dash">______________________________________________________________________________________________________________________________________________________________</p>
+
+
+        
+
+        <form action="https://www.google.com/search" method="GET">
+        <div class="sector">
+            <div id="flex1new">
+                <p id="item11">
+                    Find pages with...
+                </p>
+                <p id="item12">
+                    To do this in the search box.
+                </p>
+            </div>
+            <div class="flex2">
+                <p class="item21">all these words:</p>
+              
+                    <input id="item22" type="text" name="as_q">
+                
+                <p class="item23">
+                    Type the important words: 
+                </p>
+                <p class="special"> tricolor rat terrier</p>
+            </div>
+            
+            <div class="flex2">
+                <p class="item21">this exact word or phrase:</p>
+               
+                    <input id="item2d" type="text" name="as_epq">
+                
+                <p class="item23">
+                    Put these words in quotes:  
+                </p>
+                <p class="special"> "rat terrier"</p>
+            </div>
+
+            <div class="flex2">
+                <p class="item21">any of these words:</p>
+                
+                    <input id="item5d" type="text" name="as_oq">
+                
+                <p class="item23">
+                    Type OR between the words you want: 
+                </p>
+                <p class="special"> miniatureOR regular</p>
+            </div>
+
+            <div class="flex2">
+                <p class="item21">none of these words:</p>
+                
+                    <input id="item3d" type="text" name="as_eq">
+                
+                <p class="item23">
+                    Put the minus sign before the words you don't want:  
+                </p>
+                <p class="special2"> <br>-rodent, -"Jack Russell"</p>
+            </div>
+
+            <div class="flex2">
+                <p class="item21">range of numbers from:</p>
+                
+                    <input id="item4d" type="text" name="as_nlo">
+                
+                <p id="until">until</p>
+                
+                    <input id="item6d" type="text" name="as_nhi">
+                
+                <p class="item23">
+                    Put 2 dots between numbers and add a unit of mesurement
+                </p>
+                <p class="special3"> <br>10..35 pounds, $300..$500, 2010..2011</p>
+            </div>
+            
+        </div>
+
+        <p id="dash1">________________________________________________________________________________________________________________________________________________________</p>
+
+        <div class="sector2">
+            <div id="flex1">
+                <p id="item11">
+                    Then narrow down <br> the results based on...
+                </p>
+                
+            </div>
+
+            <div class="flex2new">
+                <p class="item21">the language:</p>
+                
+                    <input id="language" list="languages" placeholder="any language" name="lr">
+                    <datalist id="languages">
+                        <option value="English">
+                        <option value="Arabic">
+                        <option value="Armenian">
+                        <option value="Afrikaans">
+                        <option value="Vietnamese">
+                        <option value="Bulgarian">
+                        <option value="French">
+                        <option value="German">
+                        <option value="Danish">
+                        <option value="Hebrew">
+                        <option value="Greek">
+                        <option value="Estonian">
+                    </datalist>
+                
+                <p class="item23">
+                    Find pages in your chosen language. 
+                </p>
+                
+            </div>
+
+            <div class="flex2">
+                <p class="item21">the area:</p>
+                
+                    <input id="area" list="regions" placeholder="any area" name="cr">
+                    <datalist id="languages">
+                        <option value="England">
+                        <option value="Emirates">
+                        <option value="Armenia">
+                        <option value="Egypt">
+                        <option value="Vietnam">
+                        <option value="Bulgaria">
+                        <option value="France">
+                        <option value="Germany">
+                        <option value="Denmark">
+                        <option value="New York">
+                        <option value="Greece">
+                        <option value="Estonia">
+                    </datalist>
+                
+                <p class="item23">
+                    Find pages that have been published in a specific area. 
+                </p>
+                
+            </div>
+
+            <div class="flex2">
+                <p class="item21">the latest update:</p>
+                
+                    <input id="when"  placeholder="whenever"  list="update" name="as_qdr">
+                    <datalist id="languages">
+                        <option value="whenever">
+                        <option value="last 24 hours">
+                        <option value="last week">
+                        <option value="last month">
+                        <option value="last year">
+                        
+                    </datalist>
+                
+                <p class="item23">
+                    Find pages that were updated in the time period you specified.
+                </p>   
+            </div>
+
+            <div class="flex2">
+                <p class="item21">the website or domain:</p>
+                
+                    <input id="itemwhen" type="text" name="as_sitesearch">>
+                
+                <p class="itemweb">
+                    Search a website (like wikipedia.org ) or limit results to a domain like  
+                </p>
+                <p class="specialweb"> <br>.edu , .org , or .gov</p>
+            </div>
+
+            <div class="flex2">
+                <p class="item21">the terms that appear:</p>
+                
+                    <input id="page" list="location" placeholder="anywhere on the page" name="as_occt">
+                    <datalist id="languages">
+                        <option value="anywhere on the page">
+                        <option value="in the page title">
+                        <option value="in the text of the page">
+                        <option value="in the page URL">
+                        <option value="in links leading to the page">
+                       
+                    </datalist>
+                
+                <p class="item23">
+                    Search for terms on the entire page, in the page title, in the web address, <br>or in links leading to the page you're looking for. 
+                </p>
+                
+            </div>
+
+            <div class="flex2">
+                <p class="item21">the file type:</p>
+                
+                    <input id="form" list="filetype" placeholder="any form" name="as_filetype">
+                    <datalist id="languages">
+                        <option value="whenever">
+                        <option value="last 24 hours">
+                        <option value="last week">
+                        <option value="last month">
+                        <option value="last year">
+                        
+                    </datalist>
+                
+                <p class="item23">
+                    Find pages in the format you want.
+                </p>   
+            </div>
+
+            <div class="flex2">
+                <button class="usage">usage rights</button>
+                <p>:</p>
+                
+                    <input id="type" list="languages" placeholder="no filtering based on licence" name="as_rights">
+                    <datalist id="languages">
+                        <option value="whenever">
+                        <option value="last 24 hours">
+                        <option value="last week">
+                        <option value="last month">
+                        <option value="last year">
+                        
+                    </datalist>
+                
+                <p class="item23">
+                    Find pages that you can use without restrictions.
+                </p>   
+            </div>
+
+        </div>
+        
+            <input type="hidden" name="q" >
+            <button class="as" type="submit">Advanced search</button>
+        </form>
+        
+
+        <p id="dash1">________________________________________________________________________________________________________________________________________________________</p>
+        <p id="item11">You can also...</p>
+        <div id="flex3">
+            <button class="usage">Find pages that look like a URL</button>
+            <button class="usage">Search for pages you've visited</button>
+            <button class="usage">Using operators in the search box</button>
+            <button class="usage">Customize search settings</button>
+        </div>
+        <div id="flex4">
+            <div id="down">
+                <p id="gr">Greece</p>
+            </div>
+            <div id="down2">
+                <button class="downb">
+                    Aid
+                </button>
+                <button class="downb">
+                    Privacy
+                </button>
+                <button class="downb">
+                    Terms
+                </button>
+                
+            </div>
+        </div>
+        
+    </body>
+</html>
